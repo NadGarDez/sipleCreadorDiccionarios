@@ -24,17 +24,15 @@ public class principal{
 		System.out.print('\n'+"Inserte el indice de inicio, tomamdo a 1 como primera posicion"+'\n');
 		int inicio = entrada.nextInt()-1;
 		System.out.print('\n'+"Inserte el indice final, que no debe ser mayor a "+largoCadena+'\n');
-		System.out.print('\n'+"Desea especificar alguna cadena de busqueda? s para si y n para no"+'\n');
-		String opcion = entrada.nextLine();
-		if(opcion.equal("s")){
-			System.out.print("si");
-
-		}
-		else{
-
-		}
-
 		int fin = entrada.nextInt();
+
+		
+		File borrar = new File("diccionario.txt");
+
+		if(borrar.exists()){
+			borrar.delete();
+
+		}
 
 		for(int i=inicio;i<fin;i++){
 			Nodo superNodo= new Nodo(cadena.charAt(i),maximo,cadena);

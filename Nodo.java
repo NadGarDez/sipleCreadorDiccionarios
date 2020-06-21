@@ -47,55 +47,24 @@ public class Nodo{
 	}
 
 
-	public void analizar(int maximo,String cadena){
-
-		System.out.print("\n"+this.combinacion);
-
-
-		if(this.combinacion.length()<3){
-
-			
-		}
-
-		//System.out.print("\n"+this.combinacion);
-
+	public void analizar(int maximo,String cadena){// AQUI SE PUEDE ESPECIFICAR CUALQUIER CONDICION ANTES DE LLAMAR AL METODO GUARDAR COINCIDENCI
 
 		/*
 
-		System.out.print(cadena+"--");
 
-		System.out.print(cadena.indexOf("a"));
-		System.out.print("\n");
+		if((this.combinacion.indexOf("guarico")>-1)||(this.combinacion.indexOf("hotel")>-1)){ //aqui las coincidencias
 
-*/
-		if((this.combinacion.indexOf("guarico")>-1)||(this.combinacion.indexOf("hotel")>-1)){
-
-			//System.out.print('\n'+"---------------------aqui-----------");
-
-			
 
 			this.guardarCoincidencias(this.combinacion);
 
 		}
 
 
-		/*
 
-
-		for(int i=0;i<coincidencias.length();i++){
-
-			//coindicional para compara la coincidecia con el valor guardado en el nodo
-			if(true){
-
-				this.guardarCoincidencias();
-
-
-			}
-
-
-		}
 */
-
+		System.out.print("\n"+this.combinacion);
+		this.guardarCoincidencias(this.combinacion);
+		
 		if(this.grado<maximo){
 
 			this.combinaciones(cadena, maximo);
@@ -103,11 +72,12 @@ public class Nodo{
 
 		}
 
+
 	}
 
 	public void guardarCoincidencias(String coincidencia){
 
-		if(coincidencia.length()>=8){
+		//if(coincidencia.length()>=8){
 
 
 			try{
@@ -124,7 +94,7 @@ public class Nodo{
 				System.out.println("IO: " + e.getMessage());
 
 			}
-		}
+		//}
 		
 
 	}
